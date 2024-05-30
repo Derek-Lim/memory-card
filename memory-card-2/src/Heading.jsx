@@ -1,4 +1,4 @@
-export default function Heading() {
+export default function Heading({ score }) {
   return (
     <div className="heading">
       <div className="sub-heading">
@@ -7,7 +7,7 @@ export default function Heading() {
           but don't click on any more than once.</div>
       </div>
       <div className="scoreboard">
-        <div>Score: 0</div>
+        <div>Score: {score}</div>
         <div>Best score: 0</div>
       </div>
     </div>
