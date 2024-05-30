@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Card from './Card.jsx'
 import { cardList } from './data.js'
 
-export default function Cards({ incrementScore, resetScore }) {
+export default function Cards({ incrementScore, resetScore, updateBestScore }) {
   const [cards, setCards] = useState(cardList)
 
   function resetCards() {
@@ -13,6 +13,7 @@ export default function Cards({ incrementScore, resetScore }) {
   }
 
   function handleGameOver() {
+    updateBestScore()
     resetCards()
     resetScore()
   }

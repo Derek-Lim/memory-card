@@ -5,19 +5,30 @@ import './App.css'
 
 function App() {
   const [score, setScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
 
   function incrementScore() {
     setScore(score + 1)
   }
-
+  
   function resetScore() {
     setScore(0)
+  }
+  
+  function updateBestScore() {
+    if (score > bestScore) {
+      setBestScore(score)
+    }
   }
 
   return (
     <>
-      <Heading score={score} />
-      <Cards incrementScore={incrementScore} resetScore={resetScore} />
+      <Heading score={score} bestScore={bestScore} />
+      <Cards 
+        incrementScore={incrementScore}
+        resetScore={resetScore}
+        updateBestScore={updateBestScore}
+      />
     </>
   )
 }

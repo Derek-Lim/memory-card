@@ -1,4 +1,4 @@
-export default function Heading({ score }) {
+export default function Heading({ score, bestScore }) {
   return (
     <div className="heading">
       <div className="sub-heading">
@@ -8,7 +8,7 @@ export default function Heading({ score }) {
       </div>
       <div className="scoreboard">
         <div>Score: {score}</div>
-        <div>Best score: 0</div>
+        <div>Best score: {bestScore}</div>
       </div>
     </div>
   )
