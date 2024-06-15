@@ -59,3 +59,10 @@ export const cardList = [{
   url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyevA36WQjDV994NPEBetNyqrwyDbAKKGgPtUxfNU6fw&s',
   clicked: false,
 }]
+
+cardList.forEach(async card => {
+  const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=AhHPIfNk2v97nFB8npqVpUdmuhGp1A4D&s=${card.name} attack on titan`, {mode: 'cors'})
+  const gifData = await response.json()
+  const gifUrl = gifData.data.images.original.url
+  card.url = gifUrl
+})
