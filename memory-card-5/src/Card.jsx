@@ -37,7 +37,7 @@ export default function Card({
     >
       <img src={url} />
       <div>{name}</div>
-      <div>{`clicked: ${clicked}`}</div>
+      {/* <div>{`clicked: ${clicked}`}</div> */}
     </button>
   )
 }

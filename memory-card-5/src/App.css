@@ -1,7 +1,23 @@
+* {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+}
+
 .heading {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.sub-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#title {
+  font-size: 50px;
 }
 
 .container {
